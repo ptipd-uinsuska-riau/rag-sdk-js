@@ -1,6 +1,6 @@
 {
   "name": "@universitas/rag-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK untuk integrasi AI Chatbot RAG Universitas",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -36,7 +36,10 @@
   },
   "devDependencies": {
     "tsup": "^8.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vue": "^3.5.0",
+    "react": "^18.3.0",
+    "@types/react": "^18.3.0"
   },
   "license": "MIT"
 }
