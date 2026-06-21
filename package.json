@@ -1,0 +1,41 @@
+{
+  "name": "@universitas/rag-sdk",
+  "version": "1.0.0",
+  "description": "SDK untuk integrasi AI Chatbot RAG Universitas",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    },
+    "./vue": {
+      "import": { "types": "./dist/vue.d.ts", "default": "./dist/vue.js" },
+      "require": { "types": "./dist/vue.d.cts", "default": "./dist/vue.cjs" }
+    },
+    "./react": {
+      "import": { "types": "./dist/react.d.ts", "default": "./dist/react.js" },
+      "require": { "types": "./dist/react.d.cts", "default": "./dist/react.cjs" }
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts src/vue.ts src/react.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts src/vue.ts src/react.ts --format esm,cjs --dts --watch"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": { "optional": true },
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "license": "MIT"
+}
